@@ -11,11 +11,22 @@ import { Meal } from './meal.model';
       <option value="more">More than 500 Calories</option>
       <option value="less">Less Than 500 Calories</option>
     </select>
-      <div *ngFor="let meal of meals | calories:selectedCalories">
-        {{meal.name}}
-        {{meal.description}}
-        {{meal.calories}}
-        <button (click)="editButtonClicked(meal)">Edit</button>
+      <div >
+      <table class="table">
+      <tr>
+        <th>Meal Name</th>
+        <th>Description</th>
+        <th>Calories</th>
+        <th></th>
+        </tr>
+        <tr *ngFor="let meal of meals | calories:selectedCalories">
+        <td>{{meal.name}}</td>
+        <td> {{meal.description}}</td>
+        <td>{{meal.calories}}</td>
+        <td><button (click)="editButtonClicked(meal)" class="btn btn-warning">Edit</button><td>
+        </tr>
+      </table>
+
       </div>
     </div>
   </div>

@@ -7,15 +7,15 @@ import { Meal } from './meal.model';
   <div *ngIf="selectedMeal">
     <div class="form-group">
       <label>Name</label>
-      <input [(ngModel)] = "selectedMeal.name">
+      <input [(ngModel)] = "selectedMeal.name" class="form-control">
     </div>
     <div class="form-group">
       <label>Description</label>
-      <input [(ngModel)] = "selectedMeal.description">
+      <input [(ngModel)] = "selectedMeal.description" class="form-control">
     </div>
     <div class="form-group">
       <label>Calories</label>
-      <input [(ngModel)] = "selectedMeal.calories">
+      <input [(ngModel)] = "selectedMeal.calories" class="form-control">
     </div>
     <button (click)="okayButtonClicked()">Ok</button>
   </div>
