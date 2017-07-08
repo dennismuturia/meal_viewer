@@ -7,9 +7,12 @@ import { Meal } from './meal.model';
   <div class="Jumbotron">
     <h2>Meal App</h2>
   </div>
+  <div class="col-md-6">
+  <new-meal (newMealSender)="createMeal($event)"></new-meal>
+  </div>
     <meal-list [meals] = 'meals' (editButtonClickedSender)='editMeal($event)'></meal-list>
     <edit-meal (okayButtonSender)='changeSelectedMealValue($event)' [selectedMeal] = 'selectedMeal'></edit-meal>
-    <new-meal (newMealSender)="createMeal($event)"></new-meal>
+
   `
 })
 

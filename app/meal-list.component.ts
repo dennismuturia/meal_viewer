@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template:`
   <div class="container-fluid">
     <div class="row">
-    <select (change)="onchange ($event.target.value)">
+    <select (change)="onchange ($event.target.value)" class="selectpicker">
       <option value="all">All Items</option>
       <option value="more">More than 500 Calories</option>
       <option value="less">Less Than 500 Calories</option>
